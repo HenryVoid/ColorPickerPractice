@@ -12,9 +12,13 @@ struct ContentView: View {
   
     var body: some View {
         VStack {
-          ColorPicker("ColorPicker", selection: $selection, supportsOpacity: false)
+          ColorPicker(selection: $selection) {
+            Text("Hi")
+          }
+          .frame(height: 50)
         }
         .padding()
+        .background(Color.gray)
     }
 }
 
